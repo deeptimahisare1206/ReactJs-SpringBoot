@@ -10,6 +10,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 
 @Entity
 public class Products {
@@ -25,9 +26,15 @@ public class Products {
 	private Integer product_quantity;
 	private Boolean product_status;
 	
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-YYYY")
+//	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-YYYY")
 	private Date release_date;
 	
+	
+	private String image_name;
+	private String image_type;
+	
+	@Lob 
+	private byte[] image_data;
 	
 	
 	
@@ -89,6 +96,24 @@ public class Products {
 	}
 	public void setRelease_date(Date release_date) {
 		this.release_date = release_date;
+	}
+	public String getImage_name() {
+		return image_name;
+	}
+	public void setImage_name(String image_name) {
+		this.image_name = image_name;
+	}
+	public String getImage_type() {
+		return image_type;
+	}
+	public void setImage_type(String image_type) {
+		this.image_type = image_type;
+	}
+	public byte[] getImage_data() {
+		return image_data;
+	}
+	public void setImage_data(byte[] image_data) {
+		this.image_data = image_data;
 	}
 	
 

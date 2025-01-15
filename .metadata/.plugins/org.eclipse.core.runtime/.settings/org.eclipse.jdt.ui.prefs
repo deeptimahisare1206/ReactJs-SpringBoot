@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.Enum"><rhs name\="jakarta.persistence.GenerationType"/></lhs><lhs name\="java.lang.constant.Constable"><rhs name\="jakarta.persistence.GenerationType"/></lhs></history>
-=======
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=main
 content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.Enum"><rhs name\="jakarta.persistence.GenerationType"/><rhs name\="com.fasterxml.jackson.annotation.JsonFormat$Shape"/></lhs><lhs name\="java.lang.constant.Constable"><rhs name\="jakarta.persistence.GenerationType"/><rhs name\="com.fasterxml.jackson.annotation.JsonFormat$Shape"/></lhs></history>
->>>>>>> main
 content_assist_number_of_computers=18
 eclipse.preferences.version=1
 org.eclipse.jdt.ui.formatterprofiles.version=23

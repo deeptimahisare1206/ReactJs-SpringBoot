@@ -1,8 +1,11 @@
 package com.backend.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,8 +14,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.backend.entity.Products;
 import com.backend.services.P_Services;
@@ -36,10 +41,12 @@ public class MyControl {
 		this.p_Services = p_Services;
 	}
 	
-	@PostMapping
-	public Products add(@RequestBody Products products) {
-		return p_Services.add(products);
-	}
+	@PostMapping("/add")
+	public Products add(@RequestPart("product") Products products,@RequestPart("imageFile") MultipartFile imageFile) throws IOException {
+		
+			return p_Services.add(products,imageFile);
+		}
+	
 	@GetMapping
 	public List<Products> getAll() {
 		return p_Services.getAll();

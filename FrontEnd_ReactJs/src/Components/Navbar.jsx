@@ -9,12 +9,11 @@ class Navbar extends Component{
         <>
         <div className='bg-gray-200 h-full p-4 flex justify-evenly'>
 
-<div className='text-5xl'>E-Commerce</div>
+<div className='text-5xl'>Products</div>
 <ul className="flex gap-4 items-center ">
     <li><Link to="/">HOME</Link></li>
-    <li><a href="">ABOUT</a></li>
+    <li><Link to="/add">ADD </Link></li>
     <li><a href="/">CONTACT</a></li>
-    <li><Link to="/oneproduct">CATEGORIES</Link></li>
     <li><a href="">EXTRA</a></li>
 </ul>
 </div>
